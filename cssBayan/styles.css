@@ -1,0 +1,132 @@
+
+body{
+    background-color:blanchedalmond;
+    font-family: Tahoma, serif;
+    
+}
+h1{
+    margin-top: 1rem;
+}
+.bayan{
+    margin-left: auto;
+    margin-right: auto;
+    background-color:blanchedalmond;
+}
+
+.img{
+    border-radius: 30px;
+    display: inline-block;
+    width: 15rem;
+    height: 15rem;
+}
+  
+li {
+    text-align: center;
+    list-style-type: none;
+} 
+
+.bayan-item{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 100%;
+    line-height: 1.5rem;
+}
+
+.bayan-item label{
+    width: 100%;
+    
+}
+
+.bayan-item__input{
+    opacity: 0;
+
+}
+
+.bayan-item__trigger{
+    padding-top: 1%;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    border-top: .0625rem solid rgb(104, 105, 104);
+
+}
+.bayan-item__content{
+    display: none;
+    opacity: 0;
+    text-align: center;
+    overflow: hidden;
+    transition: 2s;
+   
+}
+
+.bayan-item__trigger__title{
+    font-size: 2rem;
+}
+
+.icon{ 
+    weight: 2rem;
+    height: 2rem;
+    opacity: 0;
+    transform: rotate(0deg);
+}
+ul:hover .icon {
+    opacity: 1;
+}
+
+.bayan-item__trigger:hover .icon{
+    transform: rotate(45deg);
+    transition: 0,5s;
+}
+
+.bayan-item__input:hover ~ .bayan-item__content{
+    display:block;
+    opacity: 1;
+    transition: all 3s ease;
+    
+}
+.bayan-item__input:checked .icon{
+    transform: rotate(45deg);
+    transition: 0,5s;
+}
+.bayan-item__input:checked ~ .bayan-item__content{
+    display:block;
+    opacity: 1;
+
+}
+
+@media screen and (min-width: 320px){
+    .bayan{
+        width: 15rem;
+    }
+    h1{
+        font-size: 1,3rem;
+    }
+    .bayan-item__trigger__title {
+      font-size: 1rem;
+    }
+  }
+  
+  @media screen and (min-width: 820px){
+    .bayan{
+        width: 45rem;
+    }
+    h1{
+        font-size: 2.5rem;
+    }
+   .bayan-item__trigger__title {
+       font-size: 1.5rem
+   }
+  }
+  @media screen and (min-width: 1920px){
+    .bayan{
+        width: 70rem;
+    }
+    h1{
+        font-size: 2,5rem;
+    }
+    .bayan-item__trigger__title {
+        font-size: 1,5rem
+    }
+} 
+  
